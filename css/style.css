@@ -1,0 +1,408 @@
+*{
+    margin:0;
+    padding: 0;
+    /* overflow-y: auto; */
+    /* overflow-x: hidden; */
+   }
+   
+   body {
+       background:white;
+       text-align: center;
+       justify-content: space-around;
+       align-items: center;
+       margin: 0px;
+       justify-content: center;
+       /* font-family: Arial, Helvetica, sans-serif; */
+       line-height: 1.6;
+       height: 100vh;
+       width: 100vw;
+     }
+   
+     .particle-slider{
+       overflow: hidden;
+       background-image: none;
+   
+     }
+   
+   html, body {
+       width: 100%;
+       /* height: 100%; */
+       margin: 0px;
+       justify-content: center;
+     }
+   
+   
+   
+   section{
+     width:100vw;
+     /* height: 100vh; */
+     /* display: flex; */
+     scroll-snap-align: center;
+   }
+   
+   
+   /* IGOR'S PARTICLE FACE  */
+   
+   .draw{
+     z-index: 8;
+     position: absolute;
+   }
+   
+   .face-container{
+     z-index: 9;
+   }
+   
+   #defaultCanvas0{
+     position: relative;
+     /* z-index: 0; */
+     /* top:0;
+     left:0; */
+     margin: auto;
+     width:100%!important;
+     height: 100vh!important;
+   }
+   
+   #dots {
+     position: absolute;
+     /* margin-left: auto;
+     margin-right: auto;
+     top: auto;
+     bottom: auto; */
+     /* left: 50%; */
+     /* margin-top: -20vh; */
+     /* margin-left: -375px; */
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     width: 35%;
+     margin: auto;
+     z-index: 1;
+   }
+   
+   
+   /* IGOR KALMYKOV PRODUCT DESIGNER */
+   
+   .myName-container{
+     position: absolute;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     margin: auto auto 40px auto;
+     height: 20vh;
+     width: 100vw;
+     z-index: 3;
+     text-align: center;
+   }
+   .myName-container a{
+     text-decoration: none;
+     font-size: 1vw;
+     font-family: ocr-a-std, monospace;
+     font-weight: 500;
+     font-style: normal;
+     letter-spacing: 3px;
+     /* text-transform: uppercase; */
+   }
+   
+   .myName{
+     display: none; 
+     position: absolute;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     margin: auto;
+     height: 20vh;
+     width: 100vw;
+     z-index: 3;
+     text-align: center; 
+     color: rgba(255, 255, 255, 0.7);
+     font-size: 3.5vw;
+     font-family: ocr-a-std, monospace;
+     font-weight: 400;
+     font-style: normal;
+     letter-spacing: 8px;
+   }
+   
+   #name{
+     font-size: 1.5vw;
+     padding-top: 20px;
+     /* margin-bottom: 0px; */
+     /* text-transform: uppercase; */
+   }
+   #title{
+     font-weight: 100;
+     font-size: 2vh;
+     margin-top: 0px;
+   }
+   
+   
+   /* BUTTON */
+   .button-world{
+     /* margin-top:20px; 
+     position: absolute;
+     z-index: 4;
+     margin-left: auto;
+     margin-right: auto; */
+     /* top: 60vh; */
+     /* bottom: 20px; */
+     margin: auto;
+   
+     line-height: 50px;
+       /* height: 50px; */
+       text-align: center;
+       width: 20vw;
+     cursor: pointer;
+   }
+   
+   
+   .btn-three {
+       color: white;
+       transition: all 0.5s;
+       position: relative;
+   }
+   .btn-three::before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 20vw;
+       height: 50px;
+       z-index: 1;
+     background-color: rgba(255,255,255,0.3);
+     border: 1px solid rgba(255,255,255,0.5);
+       transition: all 0.3s;
+   }
+   .btn-three:hover::before {
+       opacity: 0 ;
+       transform: scale(0.5,0.5);
+   }
+   .btn-three::after {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 20vw;
+       height: 50px;
+       z-index: 1;
+       opacity: 0;
+       transition: all 0.3s;
+       /* border: 1px solid rgba(255,255,255,0.5); */
+       transform: scale(1.2,1.2);
+   }
+   .btn-three:hover::after {
+       opacity: 1;
+       transform: scale(1,1);
+   }
+   
+   
+   
+   /* ABOUT */
+   
+   
+   .tabs .tab a {
+     color: white!important;
+   }
+   
+   
+   @media (max-width: 960px) {
+    canvas#dots{
+      display: none;
+    }
+   
+    .myName{
+      display: inline;
+    }
+   .eye{
+     display: none;
+   }
+   .particle-slider{
+   background-image: url('../img/galaxy-space.jpg');
+   background-repeat: no-repeat;
+   background-size: 100vw 100vh;
+   }
+   .button-world{
+     
+     width: 30vw;
+   }
+   
+   .btn-three::before {
+      width: 30vw;
+   }
+   .btn-three::after {
+     width: 30vw;
+   }
+   .myName-container a{
+   
+   font-size: 1.5vw;
+   }
+   }
+   
+   @media (max-width: 600px) {
+     
+     .button-world{
+     
+       width: 50vw;
+     }
+   
+     .btn-three::before {
+        width: 50vw;
+     }
+     .btn-three::after {
+       width: 50vw;
+   }
+   .myName-container a{
+    
+     font-size: 3vw;
+   }
+   .myName{
+     
+     font-size: 5vw;
+     
+   }
+   #name{
+     
+     font-size: 2vw;
+     
+   }
+   
+   }
+   
+   @media (max-width: 360px) {
+     
+     .button-world{
+     
+       width: 90vw;
+     }
+   
+     .btn-three::before {
+        width: 90vw;
+     }
+     .btn-three::after {
+       width: 90vw;
+   }
+   .myName-container a{
+    
+     font-size: 5vw;
+   }
+   .myName{
+     
+     font-size: 6vw;
+     
+   }
+   #name{
+     
+     font-size: 3vw;
+     
+   }
+   
+   }
+   @media (width: 1366px) and (height: 1024px) {
+     canvas#dots{
+       display: none;
+     }
+    
+     .myName{ 
+       display: inline;
+     }
+    .eye{
+      display: none;
+    }
+    .particle-slider{
+    background-image: url('../img/galaxy-space.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    }
+    }
+   
+    @media (width: 1024px) and (height: 768px) {
+     canvas#dots{
+       display: none;
+     }
+    
+     .myName{ 
+       display: inline;
+     }
+    .eye{
+      display: none;
+    }
+    .particle-slider{
+    background-image: url('../img/galaxy-space.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    }
+    }
+   
+    @media (width: 1024px) and (height: 800px) {
+     canvas#dots{
+       display: none;
+     }
+    
+     .myName{ 
+       display: inline;
+     }
+    .eye{
+      display: none;
+    }
+    .particle-slider{
+    background-image: url('../img/galaxy-space.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    }
+    }
+   
+    @media (width: 1024px) and (height: 1366px) {
+     canvas#dots{
+       display: none;
+     }
+    
+     .myName{ 
+       display: inline;
+     }
+    .eye{
+      display: none;
+    }
+    .particle-slider{
+    background-image: url('../img/galaxy-space.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    }
+    }
+   
+   
+   /* @media (min-height:1080px){
+     canvas#dots{
+       display: none;
+     }
+    
+     .myName{ 
+       display: inline;
+     }
+    .eye{
+      display: none;
+    }
+    .particle-slider{
+    background-image: url('../img/galaxy-space.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    }
+   } */
+   
+   /* @media only screen and (max-width: 1025px){
+     .particle-slider{
+       background-image: url('../img/space.gif');
+       background-repeat: no-repeat;
+       background-size: 100vw 100vh;
+   }
+   canvas#dots{
+     display: none;
+   }
+   
+   .myName{
+     display: inline;
+   }
+   .eye{
+    display: none;
+   }
+   } */
